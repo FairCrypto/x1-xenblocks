@@ -1482,14 +1482,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3c5e1a9a646d36c3599cd173a41282daf47c44583ad367b8e6837255952e5c67"
 
 [[package]]
-name = "sol-xenblocks"
-version = "0.1.0"
-dependencies = [
- "anchor-lang",
- "solana-program",
-]
-
-[[package]]
 name = "solana-frozen-abi"
 version = "1.18.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1931,6 +1923,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "59b5e5f6c299a3c7890b876a2a587f3115162487e704907d9b6cd29473052ba1"
 dependencies = [
  "memchr",
+]
+
+[[package]]
+name = "x1-xenblocks"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "solana-program",
 ]
 
 [[package]]

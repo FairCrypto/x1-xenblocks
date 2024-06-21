@@ -1,9 +1,9 @@
 use anchor_lang::prelude::*;
 
-declare_id!("B5MNFgbspJr1iLfsPn7jJSK6k5PLD6CDBvfnRhE6hQZn");
+declare_id!("BjsjDcLy3qb2pgKxqjLRwMX6bKdcZLbJmqcRFCitVXUw");
 
 #[program]
-pub mod sol_xenblocks {
+pub mod x1_xenblocks {
     use super::*;
 
     pub fn initialize(ctx: Context<InitXenBlocks>) -> Result<()> {

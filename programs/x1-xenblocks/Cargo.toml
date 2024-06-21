@@ -1,12 +1,12 @@
 [package]
-name = "sol-xenblocks"
+name = "x1-xenblocks"
 version = "0.1.0"
-description = "Created with Anchor"
+description = "X1 XenBlocks Ledger"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "sol_xenblocks"
+name = "x1_xenblocks"
 
 [features]
 default = []

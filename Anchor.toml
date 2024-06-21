@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-sol_xenblocks = "B5MNFgbspJr1iLfsPn7jJSK6k5PLD6CDBvfnRhE6hQZn"
+x1_xenblocks = "BjsjDcLy3qb2pgKxqjLRwMX6bKdcZLbJmqcRFCitVXUw"
 
 [registry]
 url = "https://api.apr.dev"
