@@ -124,6 +124,7 @@ pub struct XenBlocksState {
 #[derive(InitSpace, Default)]
 pub struct XenBlockInfo {
     pub key: [u8; 32],
+    pub block_type: u8,
     #[max_len(44)]
     pub miner: String,
     pub votes: u32
@@ -141,6 +142,7 @@ pub struct NewBlock {
     id: u128,
     miner: String,
     key: [u8; 32],
+    block_type: u8, 
     // TODO: do we need slot here ???
     slot: u64,
 }
