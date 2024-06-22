@@ -12,7 +12,7 @@ pub mod x1_xenblocks {
         Ok(())
     }
 
-    pub fn submit_block(ctx: Context<SubmitXenBlock>, id: u128, key: [u8; 32], miner: String) -> Result<()> {
+    pub fn submit_block(ctx: Context<SubmitXenBlock>, id: u128, key: [u8; 32], block_type: u8, miner: String) -> Result<()> {
         require!(ctx.accounts.xen_block_info.key == key, XenBlocksError::AlreadySubmitted);
         // TODO: do we need to check linearity ???
         // TODO: check block id != 0 ???
@@ -22,8 +22,9 @@ pub mod x1_xenblocks {
         ctx.accounts.xen_blocks.block_id = id;
         // init block info
         ctx.accounts.xen_block_info.key = key.clone();
+        ctx.accounts.xen_block_info.block_type = block_type;
         // emit event
-        emit!(NewBlock { id, miner, key, slot });
+        emit!(NewBlock { id, block_type, miner, key, slot });
 
         Ok(())
     }
@@ -142,7 +143,7 @@ pub struct NewBlock {
     id: u128,
     miner: String,
     key: [u8; 32],
-    block_type: u8, 
+    block_type: u8,
     // TODO: do we need slot here ???
     slot: u64,
 }
